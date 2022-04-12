@@ -9,13 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = <h1>Todos App</h1>;
     ReactDOM.render(header, root);
 
-    //Remove this after done developing
+    //Add store to the window  (used for testing)
     const store =  configureStore();
     window.store =  store;
+
+    //Add todo actions to the window (used for testing)
     window.receiveTodo = receiveTodo;
     window.receiveTodos = receiveTodos;
     window.removeTodo = removeTodo;
-    
+
+    //Add step actions to the window (used for testing)
     window.receiveStep = receiveStep;
     window.receiveSteps = receiveSteps;
     window.removeStep = removeStep;

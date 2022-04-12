@@ -16,20 +16,29 @@ const initialState = {
 };
 
 const todosReducer = (state = initialState, action) => {
+
+  //Freeze state so it cannot be mutated
   Object.freeze(state);
+
   let nextState;
     switch (action.type) {
+    //Replace the current todos state with the new todos
     case RECEIVE_TODOS:
         nextState = {};
+        //Iterate through todos and add them each to the nextState
         action.todos.forEach((todo) => {
           nextState[todo.id] = todo;
         })
         return nextState;
+    //Append the todo to the current state
     case RECEIVE_TODO:
+        //Create a shallow copy of the current state
         nextState = Object.assign({}, state);
         nextState[action.todo.id] = action.todo;
         return nextState;
+    //Remove the todo to the current state
     case REMOVE_TODO:
+        //Create a shallow copy of the current state
         nextState = Object.assign({}, state);
         delete nextState[action.todo.id];
         return nextState;

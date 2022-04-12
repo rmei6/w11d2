@@ -1,6 +1,7 @@
 import {RECEIVE_STEPS, RECEIVE_STEP, REMOVE_STEP} from "../actions/step_actions"
+
 const initialState = {
-      1: { // this is the step with id = 1
+  1: { // this is the step with id = 1
     id: 1,
     title: 'walk to store',
     done: false,
@@ -9,6 +10,12 @@ const initialState = {
     2: { // this is the step with id = 2
     id: 2,
     title: 'buy soap',
+    done: false,
+    todo_id: 1
+    },
+    3: { // this is the step with id = 3
+    id: 3,
+    title: 'clean',
     done: false,
     todo_id: 1
     }
