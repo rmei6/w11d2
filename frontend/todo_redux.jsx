@@ -7,11 +7,13 @@ import Root from "./components/root";
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    ReactDOM.render(<Root />, root);
+    
 
     //Add store to the window  (used for testing)
     const store =  configureStore();
     window.store =  store;
+
+    ReactDOM.render(<Root store={store} />, root);
 
     //Add todo actions to the window (used for testing)
     window.receiveTodo = receiveTodo;
