@@ -13,11 +13,14 @@ export default class StepListItem extends React.Component {
     doneClicked(e){
         // debugger;
         if(e.target.tagName === 'BUTTON') {
-            let temp = this.props.step;
-            temp.done = !temp.done;
-            // debugger;
-            this.props.receiveStep(temp);
-            this.setState({done:temp.done});    //force state to rerender
+            // let temp = this.props.step;
+            // temp.done = !temp.done;
+            // // debugger;
+            // this.props.receiveStep(temp);
+            // this.setState({done:temp.done});    //force state to rerender
+
+            let toggledStep = Object.assign({}, this.props.step, {done: !this.props.step.done})
+            this.props.receiveStep(toggledStep);
         }
     }
 
@@ -28,7 +31,7 @@ export default class StepListItem extends React.Component {
 
     render(){
         return (
-            <li>Title: {this.props.step.title} Body: {this.props.step.body} Done: {this.props.step.done.toString()}
+            <li>Title: {this.props.step.title} Body: {this.props.step.body}
                 <button onClick={this.doneClicked}>{this.props.step.done ? "Undo" : "Done"}</button>
                 <button onClick={this.handleDelete}>Delete Step</button>
             </li>

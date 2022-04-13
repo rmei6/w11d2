@@ -20,10 +20,12 @@ class ToDoListItem extends React.Component {
     }
 
     doneClicked(e) {
-        e.stopPropagation();
-        let temp = this.props.todo;
-        temp.done = !temp.done;
-        this.props.receiveTodo(temp);
+        // e.stopPropagation();
+        // let temp = this.props.todo;
+        // temp.done = !temp.done;
+        // this.props.receiveTodo(temp);
+        let toggledTodo  = Object.assign({}, this.props.todo, {done: !this.props.todo.done});
+        this.props.receiveTodo(toggledTodo);
     }
 
     detailClicked(e){
