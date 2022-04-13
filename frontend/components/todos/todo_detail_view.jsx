@@ -6,6 +6,8 @@ export default class TodoDetailView extends React.Component {
     }
 
     render() {
-        
+        return (
+            <li>Id: {this.props.todo.id} Body: {this.props.todo.body}</li>
+        )
     }
 }
