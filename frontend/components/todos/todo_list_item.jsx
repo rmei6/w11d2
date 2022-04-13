@@ -27,10 +27,12 @@ class ToDoListItem extends React.Component {
     }
 
     detailClicked(e){
-        e.stopPropagation();
-        this.setState({
-            detail: !this.state.detail
-        })
+        // debugger;
+        if(e.target.tagName === 'LI'){
+            this.setState({
+                detail: !this.state.detail
+            })
+        }
     }
 
     render(){
