@@ -9,11 +9,33 @@ export default class ToDoForm extends React.Component  {
             body: "",
             done: false
         }
+        this.updateTitle = this.updateTitle.bind(this);
+        this.updateBody = this.updateBody.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    updateTitle(e){
+        this.setState({title:e.target.value})
+    }
+
+    updateBody(e){
+        this.setState({body:e.target.value})
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+        this.props.receiveTodo(this.state);
+        this.setState({
+            id: this.uniqueId(),
+            title: "",
+            body: "",
+            done: false
+        })
+    }
+    
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <h1>Create New Todo</h1>
                 <label>Title
                     <input 
@@ -29,6 +51,7 @@ export default class ToDoForm extends React.Component  {
                         onChange={this.updateBody}
                     />
                 </label>
+                <input type="submit" value="Add Todo"/>
             </form>
         )
     }
