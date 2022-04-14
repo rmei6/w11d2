@@ -5,11 +5,11 @@ import {receiveTodo , receiveTodos, removeTodo} from "./actions/todo_actions";
 import {receiveStep , receiveSteps, removeStep} from "./actions/step_actions";
 import Root from "./components/root";
 import {allTodos, stepsByTodoId} from "./reducers/selectors";
+import {fetchTodos} from "./util/todo_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
     
-
     //Add store to the window  (used for testing)
     const store =  configureStore();
     window.store =  store;
@@ -29,4 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.allTodos = allTodos;
 
     window.stepsByTodoId = stepsByTodoId;
+
+    window.fetchTodos = fetchTodos;
 })
