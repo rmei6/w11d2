@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     //Add store to the window  (used for testing)
     const store =  configureStore();
+    store.dispatch(fetchTodos());
     window.store =  store;
 
     ReactDOM.render(<Root store={store} />, root);
