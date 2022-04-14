@@ -11,7 +11,7 @@ export default (props) => {
                     props.todos.map(todo => <ToDoListItem key={todo.id} todo={todo} receiveTodo={props.receiveTodo} removeTodo={props.removeTodo}/> )
                 }
             </ul>
-            <ToDoForm receiveTodo={props.receiveTodo} createTodo={props.createTodo}/>
+            <ToDoForm receiveTodo={props.receiveTodo} createTodo={props.createTodo} errors={props.errors}/>
         </div>
     )
 }

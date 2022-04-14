@@ -22,7 +22,7 @@ export default class ToDoForm extends React.Component  {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.createTodo(this.state);
+        this.props.createTodo(this.state)
         this.setState({ title: '', body: '' })
     }
     
@@ -45,6 +45,7 @@ export default class ToDoForm extends React.Component  {
                     />
                 </label>
                 <input type="submit" value="Add Todo"/>
+                <p>{this.props.errors}</p>
             </form>
         )
     }
