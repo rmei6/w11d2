@@ -995,3 +995,190 @@ Processing by Api::TodosController#index as JSON
 Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/" for ::1 at 2022-04-14 16:22:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 459ms (Views: 454.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-04-14 16:22:53 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-04-14 16:22:59 -0400
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"test", "body"=>"test"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test"], ["body", "test"], ["created_at", "2022-04-14 20:22:59.806667"], ["updated_at", "2022-04-14 20:22:59.806667"]]
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2022-04-14 16:29:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 496ms (Views: 491.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-04-14 16:29:04 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (2.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2022-04-14 16:29:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-04-14 16:31:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-04-14 16:31:02 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-04-14 16:31:09 -0400
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"test1", "body"=>"test1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[36mTodo Create (27.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test1"], ["body", "test1"], ["created_at", "2022-04-14 20:31:09.592918"], ["updated_at", "2022-04-14 20:31:09.592918"]]
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[35m (14.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+Completed 200 OK in 47ms (Views: 0.7ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/" for ::1 at 2022-04-14 16:32:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 546ms (Views: 543.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-04-14 16:32:31 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2022-04-14 16:32:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-04-14 16:32:48 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2022-04-14 16:34:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 547ms (Views: 541.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-04-14 16:34:03 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-04-14 16:34:09 -0400
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"test2", "body"=>"test2"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[36mTodo Create (1.0ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test2"], ["body", "test2"], ["created_at", "2022-04-14 20:34:09.394403"], ["updated_at", "2022-04-14 20:34:09.394403"]]
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+Completed 200 OK in 22ms (Views: 0.8ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/" for ::1 at 2022-04-14 16:35:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 590ms (Views: 586.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-04-14 16:36:01 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (3.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-04-14 16:36:08 -0400
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"test3", "body"=>"tesst3"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test3"], ["body", "tesst3"], ["created_at", "2022-04-14 20:36:08.175634"], ["updated_at", "2022-04-14 20:36:08.175634"]]
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-04-14 16:36:21 -0400
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"test4", "body"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[35m (41.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+Completed 422 Unprocessable Entity in 60ms (Views: 0.2ms | ActiveRecord: 41.4ms)
+
+
+Started GET "/" for ::1 at 2022-04-14 16:36:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-04-14 16:36:38 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-04-14 16:37:08 -0400
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"test4", "body"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:12
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+

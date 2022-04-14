@@ -22,9 +22,8 @@ export default class ToDoForm extends React.Component  {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.createTodo(this.state).then(
-            () => this.setState({ title: '', body: '' })
-        );
+        this.props.createTodo(this.state);
+        this.setState({ title: '', body: '' })
     }
     
     render() {
