@@ -1,7 +1,7 @@
 import { allErrors, allTodos } from "../../reducers/selectors"
 import { connect } from "react-redux"
 import TodoList from "./todo_list"
-import { receiveTodo, createTodo } from "../../actions/todo_actions"
+import { receiveTodo, createTodo, removeTodo, updateTodo, deleteTodo } from "../../actions/todo_actions"
 import { clearErrors } from "../../actions/error_actions"
 
 const mapStateToProps = (state) => {
@@ -21,8 +21,11 @@ const mapDispatchToProps = (dispatch) =>{
             createTodo: todo => {
                 dispatch(createTodo(todo))
             },
-            clearErrors: () => {
-                dispatch(clearErrors())
+            updateTodo: todo => {
+                dispatch(updateTodo(todo))
+            },
+            deleteTodo: todo => {
+                dispatch(deleteTodo(todo))
             }
     }
 }

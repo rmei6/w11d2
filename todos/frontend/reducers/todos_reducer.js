@@ -39,6 +39,7 @@ const todosReducer = (state = initialState, action) => {
     //Remove the todo to the current state
     case REMOVE_TODO:
         //Create a shallow copy of the current state
+        debugger;
         nextState = Object.assign({}, state);
         delete nextState[action.todo.id];
         return nextState;

@@ -16,7 +16,8 @@ class ToDoListItem extends React.Component {
 
     handleDelete(e){
         e.stopPropagation();
-        this.props.removeTodo(this.props.todo);
+        debugger;
+        this.props.deleteTodo(this.props.todo);
     }
 
     doneClicked(e) {
@@ -25,7 +26,7 @@ class ToDoListItem extends React.Component {
         // temp.done = !temp.done;
         // this.props.receiveTodo(temp);
         let toggledTodo  = Object.assign({}, this.props.todo, {done: !this.props.todo.done});
-        this.props.receiveTodo(toggledTodo);
+        this.props.updateTodo(toggledTodo);
     }
 
     detailClicked(e){

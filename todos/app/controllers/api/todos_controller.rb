@@ -28,7 +28,7 @@ class Api::TodosController < ApplicationController
     def destroy 
         @todo = Todo.find(params[:id])
         @todo.destroy
-        render json: Todo.all
+        render json: @todo
     end
 
     private 

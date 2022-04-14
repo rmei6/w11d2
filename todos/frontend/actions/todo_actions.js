@@ -20,6 +20,7 @@ export const receiveTodo = (todo) => {
 };
 
 export const removeTodo = (todo) => {
+    debugger;
     return {
         type: REMOVE_TODO,
         todo
@@ -44,6 +45,32 @@ export const createTodo = (todo) => {
                     dispatch(clearErrors());
                 },
                 err => dispatch(receiveErrors(err.responseJSON))
+            )
+    }
+}
+
+export const updateTodo = (todo) => {
+    return (dispatch) => {
+        return Util.updateTodo(todo)
+            .then(
+                todo => {
+                    dispatch(receiveTodo(todo));
+                    dispatch(clearErrors());
+                },
+                err => dispatch(receiveErrors(err.responseJSON))
+            )
+    }
+}
+
+export const deleteTodo = (todo) => {
+    debugger;
+    return (dispatch) => {
+        return Util.deleteTodo(todo)
+            .then(
+                todo => {
+                    debugger;
+                    dispatch(removeTodo(todo));
+                }
             )
     }
 }

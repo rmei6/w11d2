@@ -14,3 +14,20 @@ export const createTodo = (todo) => {
         }
         })
 }
+
+export const updateTodo = (todo) => {
+    return $.ajax({
+        method: 'PATCH',
+        url: `/api/todos/${todo.id}`,
+        data: {
+            todo: todo
+        }
+        })
+}
+
+export const deleteTodo = (todo) => {
+    return $.ajax({
+        method: 'DELETE',
+        url: `/api/todos/${todo.id}`
+        })
+}
