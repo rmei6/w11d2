@@ -9,7 +9,6 @@ export default class TodoDetailView extends React.Component {
     render() {
         return (
             <StepListContainer todo_id={this.props.todo.id}/>
-            // <li>Id: {this.props.todo.id} Body: {this.props.todo.body}</li>
         )
     }
 }

@@ -21,16 +21,11 @@ class ToDoListItem extends React.Component {
     }
 
     doneClicked(e) {
-        // e.stopPropagation();
-        // let temp = this.props.todo;
-        // temp.done = !temp.done;
-        // this.props.receiveTodo(temp);
         let toggledTodo  = Object.assign({}, this.props.todo, {done: !this.props.todo.done});
         this.props.updateTodo(toggledTodo);
     }
 
     detailClicked(e){
-        // debugger;
         if(e.target.tagName === 'LI'){
             this.setState({
                 detail: !this.state.detail
