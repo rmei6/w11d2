@@ -4,10 +4,8 @@ export default class ToDoForm extends React.Component  {
     constructor(props) {
         super(props);
         this.state = {
-            id: this.uniqueId(),
             title: "",
-            body: "",
-            done: false
+            body: ""
         }
         this.updateTitle = this.updateTitle.bind(this);
         this.updateBody = this.updateBody.bind(this);
@@ -24,15 +22,9 @@ export default class ToDoForm extends React.Component  {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.createTodo(this.state)
-            .then(()=>{
-                this.setState({
-                    id: this.uniqueId(),
-                    title: "",
-                    body: "",
-                    done: false
-                })
-            });
+        this.props.createTodo(this.state).then(
+            () => this.setState({ title: '', body: '' })
+        );
     }
     
     render() {
@@ -56,9 +48,5 @@ export default class ToDoForm extends React.Component  {
                 <input type="submit" value="Add Todo"/>
             </form>
         )
-    }
-
-    uniqueId() {
-        return new Date().getTime();
     }
 }
